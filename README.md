@@ -3,40 +3,29 @@
 
 Este projeto é uma ferramenta para auxiliar no registro diário de atividades de alunos em programas de inclusão escolar (AEE).
 
-## Como publicar no GitHub Pages
+## 🚀 Como publicar Corretamente (Evitando Tela Branca)
 
-Para disponibilizar este site online através do GitHub, siga estes passos:
+Como este é um projeto em **TypeScript (React)**, o GitHub Pages precisa de um processo de "Build". Siga estes passos:
 
-1.  **Crie um repositório no GitHub:**
-    *   Vá em [github.com/new](https://github.com/new).
-    *   Dê um nome ao repositório (ex: `includaily`).
-    *   Mantenha-o como **Public**.
+1.  **Habilitar GitHub Actions:**
+    *   No seu repositório no GitHub, vá em **Settings** (Configurações).
+    *   No menu lateral, clique em **Pages**.
+    *   Em **Build and deployment** > **Source**, mude para: **GitHub Actions**.
 
-2.  **Suba os arquivos:**
-    *   Clique em "uploading an existing file".
-    *   Arraste todos os arquivos da pasta do projeto (`index.html`, `index.tsx`, `App.tsx`, `types.ts`, etc.).
-    *   Clique em "Commit changes".
+2.  **Subir as Alterações:**
+    *   Certifique-se de que os arquivos `.github/workflows/deploy.yml`, `vite.config.ts` e o novo `index.html` estão no seu repositório.
+    *   Toda vez que você atualizar um arquivo, o GitHub fará o "Build" automaticamente (você pode acompanhar na aba **Actions**).
 
-3.  **Ative o GitHub Pages:**
-    *   No seu repositório, vá em **Settings** (Configurações).
-    *   No menu lateral esquerdo, clique em **Pages**.
-    *   Em "Build and deployment" > "Branch", selecione a branch `main` e a pasta `/ (root)`.
-    *   Clique em **Save**.
-    *   Aguarde alguns minutos e o link do seu site aparecerá no topo da página.
+3.  **Acessar o Site:**
+    *   O link oficial será: `https://sarahmatos1410-glitch.github.io/Inlusaoaee/`
 
 ## Credenciais de Acesso (Teste)
 
-*   **Administrador:**
-    *   Usuário: `admin` | Senha: `123`
-    *   Usuário: `sarah` | Senha: `1234`
-*   **Auxiliar / Estagiário:**
-    *   Usuário: `auxiliar` | Senha: `123`
-    *   Usuário: `raphael` | Senha: `123`
+*   **Administrador:** `admin` ou `sarah` | Senha: `123` ou `1234`
+*   **Auxiliar / Estagiário:** `auxiliar` ou `raphael` | Senha: `123`
 
-## Tecnologias Utilizadas
-*   React 19 (via ESM)
-*   Tailwind CSS (Estilização)
-*   Lucide Icons / SVG (Ícones)
-*   Gemini API (Insights de IA)
-*   Recharts (Gráficos)
-*   LocalStorage (Persistência de dados local)
+## Configuração do Banco (Supabase)
+Para que os dados sejam compartilhados entre dispositivos diferentes:
+1. Faça login como **Sarah**.
+2. Vá na aba **Conexão Banco**.
+3. Insira sua URL e Chave Anon do Supabase.
